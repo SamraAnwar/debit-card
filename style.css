@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #e0e0e0;
+  }
+  
+  .container {
+    perspective: 1000px;
+  }
+  
+  .card-container {
+    width: 350px;
+    height: 220px;
+  }
+  
+  .debit-card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    transition: transform 1s ease;
+  }
+  
+  .card-container:hover .debit-card {
+    transform: rotateY(180deg);
+  }
+  
+  .card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-front {
+    background: linear-gradient(135deg,  #601d01, #371302);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .bank-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .chip {
+    width: 40px;
+    height: 30px;
+    background-color: #d4af37;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  .card-number {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+  }
+  
+  .expiry,
+  .cardholder-name {
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+  
+  .card-back {
+    background: linear-gradient(135deg,  #601d01, #371302);
+    color: white;
+    transform: rotateY(180deg);
+    padding: 20px;
+  }
+  
+  .strip {
+    background-color: black;
+    height: 40px;
+    margin-bottom: 20px;
+  }
+  
+  .signature-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .signature-text {
+    font-size: 0.8rem;
+  }
+  
+  .signature-strip {
+    width: 60%;
+    height: 30px;
+    background-color: white;
+    margin-right: 10px;
+  }
+  
+  .cvv {
+    background-color: white;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  .contact-info p {
+    font-size: 0.8rem;
+  }
+  
